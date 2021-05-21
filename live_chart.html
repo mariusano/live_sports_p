@@ -5,7 +5,7 @@
 window.onload = function() {
 	var dataPoints = [];
 	var chart;
-	$.getJSON("https://raw.githubusercontent.com/mariusano/live_sports_p/main/datas.json", function(data) {  
+	$.getJSON("https://mariusano.github.io/live_sports_p/datas.json", function(data) {  
 		$.each(data, function(key, value){
 			dataPoints.push({x: value[0], y: parseInt(value[1])});
 		});
