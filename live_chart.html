@@ -1,31 +1,21 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<script type="text/javascript">
-window.onload = function () {
-var dataPoints = [];
-var chart = new CanvasJS.Chart("chartContainer",{
-	title:{
-		text:"Proba de victoire"
-	},
-	data: [{
-		type: "line",
-		dataPoints : dataPoints,
-	}]
-});
-$.getJSON("https://mariusano.github.io/live_sports_p/datas.json", function(data) {  
-	$.each(data, function(key, value){
-		dataPoints.push({x: value["0"], y: parseInt(value["% victoire Cuevas P."])});
-	});	
-	chart.render();
-});
-}
-</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
 </head>
 <body>
-<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    <div id="chart" style="width:auto; height:300px;"></div> 
 </body>
+  
+<canvas id="myChart"></canvas>
+
+<script>
+    var data = {"type": "line", "data": {"labels": ["Data0", "Data1", "Data2", "Data3", "Data4"], "datasets": [{"label": "Numbers", "data": [12, 19, 3, 17, 10], "backgroundColor": "rgba(60, 180, 75, 1.0)"}]}, "options": {"plugins": {}}}
+    var ctx = document.getElementById("myChart").getContext('2d');
+    var myChart = new Chart(ctx, data);
+</script>
+
+
 </html>
