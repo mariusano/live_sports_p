@@ -20,7 +20,7 @@
             "datasets": [
             {"data": d.responseJSON["game_datas"]["player_1_prob"], "borderColor": 'rgba(60, 180, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": d.responseJSON["home"]}, 
             // {"data": [22, 30, 28, 35, 30, 12], "borderColor": (function(){ var gradient = ctx.createLinearGradient(0, 0, 1000, 0); gradient.addColorStop(0, 'rgba(230, 25, 75, 1.0)'); gradient.addColorStop(1, 'rgba(240, 50, 230, 1.0)'); return gradient})(), "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": "Draw"}, 
-            {"data": d.responseJSON["game_datas"]["player_2_prob"], "borderColor": (function(){ var gradient = ctx.createLinearGradient(0, 0, 1000, 0); gradient.addColorStop(0, 'rgba(255, 225, 25, 1.0)'); gradient.addColorStop(1, 'rgba(245, 130, 49, 1.0)'); return gradient})(), "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label":d.responseJSON["away"]}]}, 
+            {"data": d.responseJSON["game_datas"]["player_2_prob"], "borderColor": 'rgba(255, 225, 25, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label":d.responseJSON["away"]}]}, 
             "options": {"title": {"text": d.responseJSON["match"], "display": true, "fontSize": 18}, 
                         "legend": {"position": "Bottom", "labels": {"fontColor": "rgba(169, 169, 169, 1.0)", "fullWidth": true}}, 
                         "scales": {"yAxes": [{"ticks": {"beginAtZero": true, "padding": 15, "max": 100}}]}, 
