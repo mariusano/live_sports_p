@@ -26,22 +26,21 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
+                document.getElementById("myChart").remove();
+                canv = document.createElement('canvas');
+                canv.id = 'myChart';
+                canv.style =  "height: 500px; width: 90%;"
+                document.getElementById("chart").append(canv);
+                var ctx = document.getElementById("myChart").getContext('2d');
                 var myChart = new Chart(ctx, datas);
              }
             )     
     }
 
-    DrawChart(ctx);
+    DrawChart();
 
     setInterval(function () {
-        document.getElementById("myChart").remove();
-        canv = document.createElement('canvas');
-        canv.id = 'myChart';
-        canv.style =  "height: 500px; width: 90%;"
-        document.getElementById("chart").append(canv);
-        var ctx = document.getElementById("myChart").getContext('2d');
-        // console.log(div);
-        DrawChart(ctx);
+        DrawChart();
     }, 5000);
 
 </script>
