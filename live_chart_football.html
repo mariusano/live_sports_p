@@ -20,7 +20,7 @@
     function DrawChart() {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
             .done(function (data) {
-                var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
+                var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["chrono"], 
                 "datasets": [
                 {"data": d.responseJSON["game_datas"]["home_prob"], "borderColor": 'rgba(60, 180, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": d.responseJSON["home"]}, 
                 {"data": d.responseJSON["game_datas"]["draw_prob"], "borderColor": 'rgba(230, 25, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": "Draw"}, 
