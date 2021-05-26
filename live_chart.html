@@ -36,9 +36,9 @@
 
     DrawChart();
 
-    setInterval(function () {
-        DrawChart();
-    }, 10000);
+    function AutoRefresh( t ) {
+       setTimeout("location.reload(true);", t);
+    }
 
 </script>
 
