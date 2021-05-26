@@ -26,16 +26,16 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
-                try {
-                    document.getElementById("myChart").remove();
-                }
-                catch(err){
+                // try {
+                //     document.getElementById("myChart").remove();
+                // }
+                // catch(err){
                     
-                }
-                canv = document.createElement('canvas');
-                canv.id = 'myChart';
-                canv.style =  "height: 500px; width: 90%;"
-                document.getElementById("chart").append(canv);
+                // }
+                // canv = document.createElement('canvas');
+                // canv.id = 'myChart';
+                // canv.style =  "height: 500px; width: 90%;"
+                // document.getElementById("chart").append(canv);
                 var ctx = document.getElementById("myChart").getContext('2d');
                 var myChart = new Chart(ctx, datas);
              }
