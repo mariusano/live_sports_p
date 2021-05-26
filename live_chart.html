@@ -11,7 +11,7 @@
 </body>
 
 <script> 
-    function DrawChart() {
+    function DrawChart(ctx) {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
@@ -26,26 +26,22 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
-                // try {
-                //     document.getElementById("myChart").remove();
-                // }
-                // catch(err){
-                    
-                // }
-                // canv = document.createElement('canvas');
-                // canv.id = 'myChart';
-                // canv.style =  "height: 500px; width: 90%;"
-                // document.getElementById("chart").append(canv);
-                var ctx = document.getElementById("myChart").getContext('2d');
                 var myChart = new Chart(ctx, datas);
              }
             )     
     }
 
-    DrawChart();
+    DrawChart(ctx);
 
     setInterval(function () {
-        DrawChart();
+        document.getElementById("myChart").remove();
+        canv = document.createElement('canvas');
+        canv.id = 'myChart';
+        canv.style =  "height: 500px; width: 90%;"
+        document.getElementById("chart").append(canv);
+        var ctx = document.getElementById("myChart").getContext('2d');
+        // console.log(div);
+        DrawChart(ctx);
     }, 5000);
 
 </script>
