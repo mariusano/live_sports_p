@@ -13,7 +13,7 @@
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    function DrawChart() {
+    function DrawChart(ctx) {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
@@ -43,7 +43,7 @@
         document.getElementById("chart").append(canv);
         var ctx = document.getElementById("myChart").getContext('2d');
         // console.log(div);
-        DrawChart();
+        DrawChart(ctx);
     }, 5000);
 
 </script>
