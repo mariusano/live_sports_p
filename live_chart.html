@@ -13,27 +13,38 @@
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    setInterval(
-            function DrawChart() {
-            var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
-                .done(function (data) {
-                    var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
-                    "datasets": [
-                    {"data": d.responseJSON["game_datas"]["player_1_prob"], "borderColor": 'rgba(60, 180, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": d.responseJSON["home"]}, 
-                    // {"data": [22, 30, 28, 35, 30, 12], "borderColor": (function(){ var gradient = ctx.createLinearGradient(0, 0, 1000, 0); gradient.addColorStop(0, 'rgba(230, 25, 75, 1.0)'); gradient.addColorStop(1, 'rgba(240, 50, 230, 1.0)'); return gradient})(), "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": "Draw"}, 
-                    {"data": d.responseJSON["game_datas"]["player_2_prob"], "borderColor": 'rgba(255, 225, 25, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label":d.responseJSON["away"]}]}, 
-                    "options": {"title": {"text": d.responseJSON["match"], "display": true, "fontSize": 22, "fontColor": "rgba(169, 169, 169, 1.0)"}, 
-                                "legend": {"labels": {"fontColor": "rgba(169, 169, 169, 1.0)", "fullWidth": true}}, 
-                                "scales": {"yAxes": [{"ticks": {"beginAtZero": true, "padding": 15, "max": 100, "fontColor": "rgba(169, 169, 169, 1.0)"}}],
-                                            "xAxes": [{"ticks": {"fontColor": "rgba(169, 169, 169, 1.0)"}}]},
-                                "animation": {"duration": 0},
-                                "plugins": {}}}
+    function DrawChart(ctx) {
+        var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
+            .done(function (data) {
+                var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
+                "datasets": [
+                {"data": d.responseJSON["game_datas"]["player_1_prob"], "borderColor": 'rgba(60, 180, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": d.responseJSON["home"]}, 
+                // {"data": [22, 30, 28, 35, 30, 12], "borderColor": (function(){ var gradient = ctx.createLinearGradient(0, 0, 1000, 0); gradient.addColorStop(0, 'rgba(230, 25, 75, 1.0)'); gradient.addColorStop(1, 'rgba(240, 50, 230, 1.0)'); return gradient})(), "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": "Draw"}, 
+                {"data": d.responseJSON["game_datas"]["player_2_prob"], "borderColor": 'rgba(255, 225, 25, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label":d.responseJSON["away"]}]}, 
+                "options": {"title": {"text": d.responseJSON["match"], "display": true, "fontSize": 22, "fontColor": "rgba(169, 169, 169, 1.0)"}, 
+                            "legend": {"labels": {"fontColor": "rgba(169, 169, 169, 1.0)", "fullWidth": true}}, 
+                            "scales": {"yAxes": [{"ticks": {"beginAtZero": true, "padding": 15, "max": 100, "fontColor": "rgba(169, 169, 169, 1.0)"}}],
+                                        "xAxes": [{"ticks": {"fontColor": "rgba(169, 169, 169, 1.0)"}}]},
+                            "animation": {"duration": 0},
+                            "plugins": {}}}
 
-                    var myChart = new Chart(ctx, datas);
-                 }
-                )     
-        }, 5000);
+                var myChart = new Chart(ctx, datas);
+             }
+            )     
+    }
 
+    DrawChart();
+
+    setInterval(function () {
+        document.getElementById("myChart").remove();
+        canv = document.createElement('canvas');
+        canv.id = 'myChart';
+        canv.style =  "height: 500px; width: 90%;"
+        document.getElementById("chart").append(canv);
+        var ctx = document.getElementById("myChart").getContext('2d');
+        // console.log(div);
+        DrawChart(ctx);
+    }, 5000);
 
 </script>
 
