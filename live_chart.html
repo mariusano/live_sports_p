@@ -35,6 +35,13 @@
 
     DrawChart();
 
+    setInterval(function () {
+        $("myChart").remove();
+        $("chart").append('<canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>');
+        var ctx = document.getElementById("myChart").getContext('2d');
+        //console.log(div);
+        drawChart();
+    }, 10000);
 
 </script>
 
