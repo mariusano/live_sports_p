@@ -35,7 +35,7 @@
 
     DrawChart();
 
-    // setInterval(function () {
+    setInterval(function () {
         document.getElementById("myChart").remove();
         canv=document.createElement('canvas')
         ctx = canv.getContext('2d');
@@ -43,8 +43,8 @@
         canv.style =  "height: 500px; width: 90%;"
         document.getElementById("chart").append(canv);
         var ctx = document.getElementById("myChart").getContext('2d');
-        DrawChart(ctx);
-    // }, 5000);
+        DrawChart();
+    }, 10000);
 
 </script>
 
