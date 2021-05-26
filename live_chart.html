@@ -14,8 +14,7 @@
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-   function drawLineChart() {
-    $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
+    var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
         .done(function (data) {
             var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
             "datasets": [
@@ -30,7 +29,10 @@
             var myChart = new Chart(ctx, datas);
          }
         )
-    };
+
+
+
+
 
 </script>
 
