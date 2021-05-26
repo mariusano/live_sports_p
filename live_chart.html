@@ -37,8 +37,8 @@
     DrawChart();
 
     setInterval(function () {
-        docucument.getElementById("myChart").remove();
-        docucument.getElementById("chart").append('<canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>');
+        document.getElementById("myChart").remove();
+        document.getElementById("chart").append('<canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>');
         var ctx = document.getElementById("myChart").getContext('2d');
         console.log(div);
         DrawChart();
