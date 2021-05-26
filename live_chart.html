@@ -12,9 +12,7 @@
 <canvas id="myChart"></canvas>
 
 <script> 
-    Chart.defaults.global.legend = {
-        enabled: false
-        };
+
     var ctx = document.getElementById("myChart").getContext('2d');
 
     var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
@@ -29,7 +27,7 @@
                         "scales": {"yAxes": [{"ticks": {"beginAtZero": true, "padding": 15, "max": 100}}]}, 
                         "plugins": {}}}
 
-            var myChart = new Chart(ctx, datas);
+
          }
         )
 
