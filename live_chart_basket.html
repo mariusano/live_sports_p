@@ -13,7 +13,7 @@
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    function DrawChart(ctx) {
+    function DrawChart() {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
@@ -35,14 +35,14 @@
             )     
         }
 
-    DrawChart(ctx);
+    DrawChart();
 
     setInterval(function () {
         $("canvas#myChart").remove();
         $("div#chart").append('<canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>');
         var ctx = document.getElementById("myChart").getContext('2d');
         DrawChart(ctx);
-    }, 3000);
+    }, 15000);
 
 </script>
 
