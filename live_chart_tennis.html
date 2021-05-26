@@ -5,16 +5,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script type = "text/JavaScript"> function AutoRefresh( t ) { setTimeout("location.reload(true);", t); }   </script>
 </head>
-<body style="width:auto; height:auto; background-color:#333">
+<body style="width:auto; height:auto; background-color:#333" onload = "JavaScript:AutoRefresh(30000);">
     <div id="chart">
         <canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>
     </div> 
+    <p>This page will refresh every 30 seconds.</p>
 </body>
 
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    function DrawChart(ctx) {
+    function DrawChart() {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["score"], 
@@ -36,14 +37,8 @@
             )     
         }
 
-    DrawChart(ctx);
+    DrawChart();
 
-    setInterval(function () {
-        $("canvas#myChart").remove();
-        $("div#chart").append('<canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>');
-        var ctx = document.getElementById("myChart").getContext('2d');
-        DrawChart(ctx);
-    }, 15000);
 
 </script>
 
