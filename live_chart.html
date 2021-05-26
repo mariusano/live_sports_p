@@ -37,7 +37,8 @@
 
     // setInterval(function () {
         document.getElementById("myChart").remove();
-        ctx = document.createElement('canvas').getContext('2d');
+        canv=document.createElement('canvas')
+        ctx = canv.getContext('2d');
         canv.id = 'myChart';
         canv.style =  "height: 500px; width: 90%;"
         document.getElementById("chart").append(canv);
