@@ -25,7 +25,7 @@
                 {"data": d.responseJSON["game_datas"]["home_prob"], "borderColor": 'rgba(60, 180, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": d.responseJSON["home"]}, 
                 {"data": d.responseJSON["game_datas"]["draw_prob"], "borderColor": 'rgba(230, 25, 75, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label": "Draw"}, 
                 {"data": d.responseJSON["game_datas"]["away_prob"], "borderColor": 'rgba(255, 225, 25, 1.0)', "fill": false, "pointBorderWidth": 10, "pointRadius": 3, "label":d.responseJSON["away"]}]}, 
-                "options": {"title": {"text": [d.responseJSON["match"], "Half-time : "+d.responseJSON["halftime"], "Score : "+d.responseJSON["score"]], "display": true, "fontSize": 22, "fontColor": "rgba(169, 169, 169, 1.0)"},
+                "options": {"title": {"text": [d.responseJSON["match"], "Score : "+d.responseJSON["score"]], "display": true, "fontSize": 22, "fontColor": "rgba(169, 169, 169, 1.0)"},
                             "legend": {"labels": {"fontColor": "rgba(169, 169, 169, 1.0)", "fullWidth": true}}, 
                             "scales": {"yAxes": [{"ticks": {"beginAtZero": true, "padding": 15, "max": 100, "fontColor": "rgba(169, 169, 169, 1.0)"}, 
                                                     "scaleLabel":{"display":true, "labelString":"Win Probability", "fontColor": "rgba(169, 169, 169, 1.0)"}}],
