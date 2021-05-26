@@ -26,7 +26,12 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
-                document.getElementById("myChart").remove();
+                try {
+                    document.getElementById("myChart").remove();
+                }
+                catch(err){
+                    
+                }
                 canv = document.createElement('canvas');
                 canv.id = 'myChart';
                 canv.style =  "height: 500px; width: 90%;"
