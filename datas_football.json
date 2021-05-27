@@ -1,1 +1,1 @@
-{"match": "Macarthur FC - Central Coast Mariners", "home": "Macarthur FC", "away": "Central Coast Mariners", "score": "0 - 0", "halftime": 1, "game_datas": {"home_prob": [30.36, 34.62], "draw_prob": [27.91, 26.37], "away_prob": [41.73, 39.01], "chrono": [1, 2]}}
+{"match": "Macarthur FC - Central Coast Mariners", "home": "Macarthur FC", "away": "Central Coast Mariners", "score": "0 - 0", "halftime": 1, "game_datas": {"home_prob": [30.36, 34.62, 33.32], "draw_prob": [27.91, 26.37, 27.23], "away_prob": [41.73, 39.01, 39.45], "chrono": [1, 2, 3]}}
