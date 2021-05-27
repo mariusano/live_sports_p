@@ -9,14 +9,22 @@
     <div id="chart">
         <canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>
     </div> 
-    <p>This page will refresh every 30 seconds.</p>
+    <p style="text-align:center; color:rgba(169, 169, 169, 1.0)">
+        This service has a couple minutes delay. Don't use it for betting.
+        <br />This page will refresh every 30 seconds.
+        <br />For any question or commercial interest, please contact me on Twitter 
+            <a style="text-align:center; color:rgba(169, 169, 169, 1.0)" href="https://twitter.com/messages/compose?recipient_id=1049941147760689152" target="_blank"
+  class="twitter-dm-button" target:_blank data-screen-name="@bet_on_us">@bet_on_us</a>
+    </p>
+
+
 </body>
 
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
     function DrawChart() {
-        var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas.json')
+        var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas_tennis.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["timestamp"], 
                 "datasets": [
