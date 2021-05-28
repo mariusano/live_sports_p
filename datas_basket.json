@@ -1,1 +1,1 @@
-{"match": "CSKA Moscou - Anadolu Efes", "home": "CSKA Moscou", "away": "Anadolu Efes", "score": "2 - 5", "qt": "1st Quarter", "pronos": "Anadolu Efes", "confidence": 71.53, "game_datas": {"home_prob": [28.47], "away_prob": [71.53]}, "time": ["18:04"]}
+{"match": "CSKA Moscou - Anadolu Efes", "home": "CSKA Moscou", "away": "Anadolu Efes", "score": "2 - 8", "qt": "1st Quarter", "pronos": "Anadolu Efes", "confidence": 78.97, "game_datas": {"home_prob": [28.47, 21.03], "away_prob": [71.53, 78.97]}, "time": ["18:04", "18:06"]}
