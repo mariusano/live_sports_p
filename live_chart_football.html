@@ -48,7 +48,7 @@
                             "plugins": {}}}
 
                 $("#period").append("Period : "+d.responseJSON["halftime"])
-                $("#prono").append("IA's pronostic : "+d.responseJSON["pronos"])
+                $("#prono").append("AI's pronostic : "+d.responseJSON["pronos"])
                 $("#confidence").append("Confidence : "+d.responseJSON["confidence"]+" %")
                 var myChart = new Chart(ctx, datas);
              }
