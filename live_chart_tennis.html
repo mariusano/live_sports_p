@@ -10,6 +10,10 @@
     <div id="chart">
         <canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>
     </div> 
+
+    <div id="prono" style="text-align:left; font-size:16px ;color:rgba(169, 169, 169, 1.0); margin-left:40px"> </div>
+    <div id="confidence" style="text-align:left; font-size:16px ;color:rgba(169, 169, 169, 1.0); margin-left:40px"> </div>
+    
     <div style="text-align:center; color:rgba(169, 169, 169, 1.0) ; width: 100%; margin-top: 80px">
      <p>
         This is a free version. Update delays may occured. Do not use it for betting.
@@ -41,6 +45,8 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
+                $("#prono").append("IA's pronostic : "+d.responseJSON["pronos"])
+                $("#confidence").append("Confidence : "+d.responseJSON["confidence"]+" %")
                 var myChart = new Chart(ctx, datas);
              }
             )     
