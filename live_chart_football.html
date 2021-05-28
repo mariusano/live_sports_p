@@ -30,7 +30,7 @@
 <script> 
     var ctx = document.getElementById("myChart").getContext('2d');
 
-    function DrawChart() {
+    function {
         var d = $.getJSON('https://mariusano.github.io/live_sports_p/datas_football.json')
             .done(function (data) {
                 var datas = {"type": "line", "data": {"labels": d.responseJSON["game_datas"]["chrono"], 
@@ -55,7 +55,6 @@
             )     
         }
 
-    DrawChart();
 
 </script>
 
