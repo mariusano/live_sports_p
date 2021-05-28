@@ -11,9 +11,9 @@
         <canvas id="myChart" style = "height: 500px; width: 90%;"></canvas>
     </div>
 
-    <div id="period" style="text-align:right; font-style:italic; font-size:18px ;color:rgba(169, 169, 169, 1.0)">
-        <p> test </p>
-    </div>
+    <div id="period" style="text-align:right; font-size:16px ;color:rgba(169, 169, 169, 1.0); margin-right:20px"> </div>
+    <div id="prono" style="text-align:left; font-size:16px ;color:rgba(169, 169, 169, 1.0); margin-left:40px"> </div>
+    <div id="confidence" style="text-align:left; font-size:16px ;color:rgba(169, 169, 169, 1.0); margin-left:40px"> </div>
 
     <div style="text-align:center; color:rgba(169, 169, 169, 1.0) ; width: 100%; margin-top: 80px">
      <p>
@@ -47,6 +47,9 @@
                             "animation": {"duration": 0},
                             "plugins": {}}}
 
+                $("#period").append("Period : "+d.responseJSON["halftime"])
+                $("#prono").append("IA's pronostic : "+d.responseJSON["pronos"])
+                $("#confidence").append("Confidence : "+d.responseJSON["confidence"]+" %")
                 var myChart = new Chart(ctx, datas);
              }
             )     
