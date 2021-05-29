@@ -1,1 +1,1 @@
-{"match": "Manchester City - Chelsea", "home": "Manchester City", "away": "Chelsea", "score": "0 - 0", "halftime": "first-half", "pronos": "Manchester City", "confidence": 51.55, "game_datas": {"home_prob": [51.55], "draw_prob": [29.55], "away_prob": [18.9], "chrono": [0]}}
+{"match": "Manchester City - Chelsea", "home": "Manchester City", "away": "Chelsea", "score": "0 - 0", "halftime": "first-half", "pronos": "Manchester City", "confidence": 51.55, "game_datas": {"home_prob": [51.55, 51.55], "draw_prob": [29.55, 29.55], "away_prob": [18.9, 18.9], "chrono": [0, 1]}}
