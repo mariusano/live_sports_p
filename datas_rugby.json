@@ -1,1 +1,1 @@
-{"match": "Northampton - Wasps", "home": "Northampton", "away": "Wasps", "score": "17 - 14", "halftime": "first-half", "pronos": "Northampton", "confidence": 62.51, "game_datas": {"home_prob": [62.51], "draw_prob": [1.33], "away_prob": [36.17], "chrono": [47]}}
+{"match": "Northampton - Wasps", "home": "Northampton", "away": "Wasps", "score": "17 - 14", "halftime": "first-half", "pronos": "Northampton", "confidence": 60.3, "game_datas": {"home_prob": [62.51, 60.3], "draw_prob": [1.33, 1.38], "away_prob": [36.17, 38.31], "chrono": [47, 48]}}
