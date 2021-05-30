@@ -1,1 +1,1 @@
-{"match": "Los Angeles Lakers - Phoenix Suns", "home": "Los Angeles Lakers", "away": "Phoenix Suns", "score": "0 - 0", "qt": "1st quarter", "pronos": "Los Angeles Lakers", "confidence": 73.48, "game_datas": {"home_prob": [73.48], "away_prob": [26.52]}, "time": ["21:31"]}
+{"match": "Los Angeles Lakers - Phoenix Suns", "home": "Los Angeles Lakers", "away": "Phoenix Suns", "score": "0 - 2", "qt": "1st quarter", "pronos": "Los Angeles Lakers", "confidence": 69.48, "game_datas": {"home_prob": [73.48, 69.48], "away_prob": [26.52, 30.52]}, "time": ["21:31", "21:42"]}
