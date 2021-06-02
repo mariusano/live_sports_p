@@ -1,1 +1,1 @@
-{"match": "France - Pays de Galles", "home": "France", "away": "Pays de Galles", "score": "0 - 0", "halftime": "first-half", "pronos": "France", "confidence": 63.27, "game_datas": {"home_prob": [63.27], "draw_prob": [25.33], "away_prob": [11.4], "chrono": [0]}}
+{"match": "France - Pays de Galles", "home": "France", "away": "Pays de Galles", "score": "0 - 0", "halftime": "first-half", "pronos": "France", "confidence": 63.27, "game_datas": {"home_prob": [63.27, 63.27], "draw_prob": [25.33, 25.33], "away_prob": [11.4, 11.4], "chrono": [0, 1]}}
