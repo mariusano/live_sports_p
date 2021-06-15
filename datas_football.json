@@ -1,1 +1,1 @@
-{"match": "France - Allemagne", "home": "France", "away": "Allemagne", "score": "0 - 0", "halftime": "first-half", "pronos": "France", "confidence": 38.65, "game_datas": {"home_prob": [38.65, 38.65], "draw_prob": [25.43, 25.43], "away_prob": [35.92, 35.92], "chrono": [2, 3]}}
+{"match": "France - Allemagne", "home": "France", "away": "Allemagne", "score": "0 - 0", "halftime": "first-half", "pronos": "Allemagne", "confidence": 37.91, "game_datas": {"home_prob": [38.65, 38.65, 32.43], "draw_prob": [25.43, 25.43, 29.65], "away_prob": [35.92, 35.92, 37.91], "chrono": [2, 3, 3]}}
