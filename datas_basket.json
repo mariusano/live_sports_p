@@ -1,1 +1,1 @@
-{"match": "Phoenix Suns - LA Clippers", "home": "Phoenix Suns", "away": "LA Clippers", "score": "0 - 0", "qt": "1st quarter", "pronos": "Phoenix Suns", "confidence": 64.45, "game_datas": {"home_prob": [64.45], "away_prob": [35.55]}, "time": ["21:30"]}
+{"match": "Phoenix Suns - LA Clippers", "home": "Phoenix Suns", "away": "LA Clippers", "score": "2 - 0", "qt": "1st quarter", "pronos": "Phoenix Suns", "confidence": 67.15, "game_datas": {"home_prob": [64.45, 67.15], "away_prob": [35.55, 32.85]}, "time": ["21:30", "21:41"]}
